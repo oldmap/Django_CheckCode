@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <meta name="author" content="刘晓涛" />
+    <meta name="email" content="910843005@qq.com" />
+</head>
+<body>
+    <div class="form-input">
+        <form method="post" action="/login/">{% csrf_token %}
+            <p><input type="text" name='username' placeholder="用户名"/></p>
+            <p><input type="text" name='password' placeholder="密码" /></p>
+            <img onclick='ChangeCode();' id='imgCode' title='点击更换验证码' src="/checkcode/">
+            <p><input type="text" name="checkcode" placeholder="输入上图中的验证码"></p>
+            {% comment %}
+                其他通过隐藏的input，value为验证码的文件名，后台将key=verify_code_key value=filename
+                存在缓存或是其他地方
+                <input type="hidden" name="verify_code_key" value="{{ filename }}" >
+            {% endcomment %}
+            <input type="submit" value="提交">
+        </form>
+    </div>
+    {% comment %}
+        js:点击验证码图片后，重新发送请求
+    {% endcomment %}
+	<script type="text/javascript">
+	    function ChangeCode() {
+            var code = document.getElementById('imgCode');
+            code.src += '?';
+        }
+    </script>
+</body>
+</html>

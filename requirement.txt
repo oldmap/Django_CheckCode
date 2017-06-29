@@ -1,0 +1,5 @@
+Django==1.11.2
+olefile==0.44
+Pillow==4.1.1
+pytz==2017.2
+uWSGI==2.0.15
