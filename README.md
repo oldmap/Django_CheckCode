@@ -1,4 +1,4 @@
-﻿#Django_CheckCode
+﻿# Django_CheckCode
 
 ## 项目简介：
     本项目是使用最新的python3.6.1版本编写的在网站后台生成验证码图片的插件，该插件源码位于项目中app01/tools/CheckCode.py文件内，从头至尾均做了注释。为了便于展示效果，使用Django框架写了一个web（一切从简，未做任何修饰，一目了然，方便其他人引用）。
@@ -20,16 +20,16 @@
     2 防止防止批量注册；
 
 
-####插件源代码
+#### 插件源代码
     见位于项目中 app01/tools/CheckCode.py 这个文件内
 
-####views视图函数
+#### views视图函数
     查看app01/tools/views.py 这个文件
 
 #### 前端html如何调用？
     参考项目内 templates/login.html文件
 
-##Howto
+## Howto
 1 安装python3运行环境
 ```
     推荐使用pyenv管理多python环境
